@@ -1,6 +1,6 @@
-import { Project } from './Project'
+import Project from './Project'
 
-export interface Employee {
+interface Employee {
   login: string
   id: number
   url: string
@@ -8,3 +8,5 @@ export interface Employee {
   repos_url: string
   projects: Project[]
 }
+
+export default Employee

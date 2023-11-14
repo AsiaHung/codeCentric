@@ -1,4 +1,4 @@
-export interface Project {
+interface Project {
   id?: number
   name?: string
   full_name?: string
@@ -7,3 +7,5 @@ export interface Project {
   url?: string
   language?: null | string
 }
+
+export default Project

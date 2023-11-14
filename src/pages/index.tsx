@@ -1,54 +1,34 @@
 import { Employee as EmployeeResponse } from '@/types/responses/Employee'
-import { Employee } from '@/types/common/Employee'
+import Employee from '@/types/common/Employee'
 import { getList, getListWithBaseUrl } from '@/apiClient/DataProvider'
 import { Repo } from '@/types/responses/Repo'
 import getEmployees from '@/helper/getEmployees'
 import getEmployeesWithoutRepo from '@/helper/getEmployeesWithoutRepo'
 import type { InferGetStaticPropsType } from 'next'
 import { isEmpty } from 'lodash'
+import getCountLanguages from '@/helper/getCountLanguages'
+import { Languages } from '@/types/common/EmployeeLanguages'
 
 const Home = ({
-  employee,
+  employees,
 }: InferGetStaticPropsType<typeof getServerSideProps>): JSX.Element => {
+  const employeesWithLanguages = getCountLanguages(employees)
   return (
     <section>
-      <table>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-        <tr>
-          <td>Ernst Handel</td>
-          <td>Roland Mendel</td>
-          <td>Austria</td>
-        </tr>
-        <tr>
-          <td>Island Trading</td>
-          <td>Helen Bennett</td>
-          <td>UK</td>
-        </tr>
-        <tr>
-          <td>Laughing Bacchus Winecellars</td>
-          <td>Yoshi Tannamuri</td>
-          <td>Canada</td>
-        </tr>
-        <tr>
-          <td>Magazzini Alimentari Riuniti</td>
-          <td>Giovanni Rovelli</td>
-          <td>Italy</td>
-        </tr>
-      </table>
+      <div className="home">
+        {employeesWithLanguages.map((item) => (
+          <div key={item.login} className="home__wrapper">
+            <h1 className="home__header"> {item.login} </h1>
+            <ul>
+              {Object.entries(item.languages).map(([key, value]) => (
+                <li key={`${item.login} ${key}`}>
+                  {key} {value}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }
@@ -77,7 +57,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      employee: [...employeeWithoutRepo, ...employeeWithRepo],
+      employees: [...employeeWithoutRepo, ...employeeWithRepo],
     },
   }
 }

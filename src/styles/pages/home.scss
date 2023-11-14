@@ -1,0 +1,11 @@
+.home {
+  @apply flex flex-col gap-8;
+
+  &__wrapper {
+    @apply flex gap-8;
+  }
+
+  &__header {
+    @apply bg-primary text-white font-semibold w-full max-w-xs;
+  }
+}

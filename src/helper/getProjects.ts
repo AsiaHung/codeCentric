@@ -1,4 +1,4 @@
-import { Project } from '@/types/common/Project'
+import Project from '@/types/common/Project'
 import { Repo } from '@/types/responses/Repo'
 
 const getProjects = (repo: Repo[]) =>

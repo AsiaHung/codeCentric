@@ -1,5 +1,5 @@
 import { Employee as EmployeeResponse } from '@/types/responses/Employee'
-import { Employee } from '@/types/common/Employee'
+import Employee from '@/types/common/Employee'
 
 const getEmployeesWithoutRepo = (
   data: EmployeeResponse[],
