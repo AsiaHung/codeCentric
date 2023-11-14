@@ -1,0 +1,73 @@
+{
+  "name": "codecentric",
+  "description": "CodeCentric Test",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsiaHung/codeCentric"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cypress": "cypress open",
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
+    "commit": "cz",
+    "prepare": "husky install",
+    "release": "standard-version --no-verify"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.0",
+    "@svgr/webpack": "^8.0.1",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "commitizen": "^4.3.0",
+    "cookies-next": "^2.1.1",
+    "cypress": "^12.11.0",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "i18next": "^22.4.15",
+    "lodash": "^4.17.21",
+    "next": "13.3.1",
+    "node-sass-glob-importer": "^5.3.2",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
+    "react-i18next": "^12.2.2",
+    "react-icons": "^4.8.0",
+    "react-query": "^3.39.3",
+    "react-uuid": "^2.0.0",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "5.0.4",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
+    "@types/lodash": "^4.14.194",
+    "@types/node": "^18.16.3",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "standard-version": "^9.5.0",
+    "stylelint": "^15.10.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-order": "^6.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@digitalroute/cz-conventional-changelog-for-jira"
+    }
+  }
+}

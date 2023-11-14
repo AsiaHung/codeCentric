@@ -1,0 +1,30 @@
+// .vscode/settings.json
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.formatOnSave": true, // Tell VSCode to format files on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  // Add those two lines:
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  } // Tell VSCode to use Prettier as default file formatter
+}
