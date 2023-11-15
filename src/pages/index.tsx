@@ -7,7 +7,6 @@ import getEmployeesWithoutRepo from '@/helper/getEmployeesWithoutRepo'
 import type { InferGetStaticPropsType } from 'next'
 import { isEmpty } from 'lodash'
 import getCountLanguages from '@/helper/getCountLanguages'
-import { Languages } from '@/types/common/EmployeeLanguages'
 
 const Home = ({
   employees,

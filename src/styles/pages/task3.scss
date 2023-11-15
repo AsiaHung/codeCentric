@@ -1,0 +1,23 @@
+.task3 {
+  @apply flex flex-col gap-4;
+
+  &__head {
+    @apply flex flex-row gap-4 bg-slate-400 p-4;
+  }
+
+  &__select {
+    @apply w-full;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-4 p-3;
+  }
+
+  &__th {
+    @apply text-left;
+  }
+
+  &__td {
+    @apply py-2 pr-12;
+  }
+}
